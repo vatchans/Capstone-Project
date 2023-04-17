@@ -96,7 +96,7 @@ function Admin_Sigin() {
           {incoreectpwd?<div className="error mt-2">{showerr} <i class="fa-solid fa-circle-exclamation"></i></div>:<></>}
         </FormControl>
         <Form.Group className="text-center w-35 mb-3" controlId="formBasicEmail">
-                <button className="btn"style={{"width":"20ch"}} onClick={(e)=>handlesubmit(e)}
+                <button className="btn"style={{"width":"20ch",marginTop:"3rem"}} onClick={(e)=>handlesubmit(e)}
             >
                 Login
                 </button>
