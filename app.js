@@ -30,7 +30,7 @@ app.use('/Products',ProductRouter);
 app.use('/Query',QueryRouter)
 app.use('/Cart',CartRouter)
 app.use('/CustomerExcecutive',CustomerExcecutiveRouter)
-app.use('Admin',AdminRouter)
+app.use('/Admin',AdminRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
