@@ -61,7 +61,7 @@ function Products() {
                <img src={butter_img}></img>
                <p style={{fontSize:"14px",textAlign:"center"}}>Butter</p>
                </div>
-               <div className='category-card-filter'onClick={()=>setsearch("Honey+")}>
+               <div className='category-card-filter'onClick={()=>setsearch("Honey")}>
                <img src={honey_img}></img>
                <p style={{fontSize:"14px",textAlign:"center"}}>Honey</p>
                </div>
