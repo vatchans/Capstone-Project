@@ -58,7 +58,9 @@ function AdminDashboard() {
     if (localStorage.getItem('Admin')) {
       let token = localStorage.getItem('Admin')
       let decoded = jwtDecode(token)
-      setUsers(decoded)}
+      setUsers(decoded)
+      getOrders()
+    }
       else{
         navigate('/Admin_signin')
       }
