@@ -4,7 +4,6 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import { Fade ,Zoom,rubberBand,Slide} from "react-awesome-reveal";
 import BottomNavigation from './BottomNavigation';
 import { useNavigate } from 'react-router-dom';
-import 'animate.css';
 function Landing_page() {
   let navigate=useNavigate()
   return <>
