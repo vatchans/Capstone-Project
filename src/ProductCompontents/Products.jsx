@@ -92,7 +92,7 @@ function Products() {
                             {e.Product_name}
                         </p>
 
-                        <p className='mt-3'>{e.Product_Quantity} {e.Product_Category.includes("Milk")?<>litre</>:<>Piece</>}</p>
+                        <p className='mt-3'>{e.Product_Quantity} {e.Product_Category === "Milk" ? <>litre{e.Product_Quantity > 1 ? <>s</> : <></>}</> : e.Product_Category === "Egg" ? <>box{e.Product_Quantity > 1 ? <>es</> : <></>} (Pack of 6)</> : <></>}</p>
                         <p className='Product_price mt-2'>₹ {e.Product_Price}</p>
                         <p className='Product_Delivery mt-4'><i class="fa-solid fa-bolt"></i> Today in 90 mins </p>
                     </div>
