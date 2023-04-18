@@ -40,7 +40,7 @@ function View_Products() {
                         </div>
                     </div>
                 </div>
-                <div className='ct row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-2 g-2 m-1 mt-2 mb-5 p-5' style={{ gap: "2rem" }}>
+                <div className='ct row row-cols-1 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-2 g-2 m-1 mt-2 mb-5 p-5 w-100' style={{ gap: "4rem",display:'flex',alignItems:"center",justifyContent:"center"}}>
                     {data.Products && data.Products.filter((s) => {
                         if (Search === "") {
                             return s;
