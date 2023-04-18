@@ -68,7 +68,7 @@ function EditProduct() {
             <option value="Panneer">Panneer</option>
             <option value="Honey">Honey</option>
             <option value="Yogurt">Yogurt</option>
-            <option value="Subcription">Subscription</option>
+            <option value="Subscription">Subscription</option>
           </select>
           <input type='text' placeholder='Product Image URL'value={Product_Image} onChange={(e)=>setImage(e.target.value)}/>
           <input type='Number' placeholder='Product Price'value={Product_Price} onChange={(e)=>setPrice(e.target.value)}  />
