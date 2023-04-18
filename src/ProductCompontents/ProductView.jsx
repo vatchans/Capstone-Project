@@ -217,7 +217,7 @@ function ProductView() {
                 <p className='Product-content-title'>
                   {e.Product_name}
                 </p>
-                <p className='Product-content-quantity'>{e.Product_Quantity} {e.Product_Category === "Milk" ? <>litre{e.Product_Quantity > 1 ? <>s</> : <></>}</> : e.Product_Category === "Egg" ? <>box{e.Product_Quantity > 1 ? <>es</> : <></>} (Pack of 6)</> : <></>}</p>
+                <p className='Product-content-quantity'>{e.Product_Quantity} {e.Product_Category === "Milk" ? <>litre{e.Product_Quantity > 1 ? <>s</> : <></>}</> : e.Product_Category === "Egg" ? <>box{e.Product_Quantity > 1 ? <>es</> : <></>} (Pack of 6)</> :e.Product_Category === "Subscription" ? <>Month{e.Product_Quantity > 1 ? <>s</> : <></>} Subscription</>:<>Kg</>}</p>
                 <p className='Product-content-Price'>
                   <CurrencyRupeeIcon />{e.Product_Price}
                 </p>
