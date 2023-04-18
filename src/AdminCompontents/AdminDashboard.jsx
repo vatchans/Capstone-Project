@@ -73,13 +73,13 @@ function AdminDashboard() {
         <h1 className='Dashboard_title'>Dashboard</h1>
         <div className='Query_Statics mt-5'>
           <div className='Query p-3'>
-            <div style={{ width: "50px", height: "50px", borderRadius: "50%", backgroundColor: "yellow", padding: "10px" }}>
-              <PendingActionsIcon />
+            <div style={{ width: "50px", height: "50px", borderRadius: "50%", backgroundColor: "yellow",display:"flex",alignItems:'center',justifyContent:"center"}}>
+            <i class="fa-solid fa-cow"></i>
             </div>
             <div className='Query-box'>
               <div className='Query-title'>
                 <p className='mt-3'>No of Products</p>
-                <p className='mt-4 query_count'>{data.Pending_queries.length}</p>
+                <p className='mt-4 query_count'>{data.Products.length}</p>
                 <p className='mt-8 query-fected-time'><AccessTimeIcon /> 24hrs ago</p>
               </div>
               <div>
@@ -88,8 +88,8 @@ function AdminDashboard() {
                   data={{
                     datasets: [
                       {
-                        backgroundColor: ['yellow', 'grey'],
-                        data: [data.Pending_queries.length, 100 - data.Pending_queries.length],
+                        backgroundColor: ['blue', 'grey'],
+                        data: [data.Products.length, 100 - data.Products.length],
                       },
                     ],
                   }}
@@ -151,7 +151,7 @@ function AdminDashboard() {
 
         </div>
       </div>
-      <TableContainer sx={{ maxHeight: 440 }} className='Table mt-5' >
+      <TableContainer sx={{ maxHeight: 440 }} className='Table' >
         <Table stickyHeader aria-label="sticky table" >
           <TableHead>
             <TableRow>
