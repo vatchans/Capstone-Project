@@ -27,6 +27,8 @@ import CustomerExecutive_Returntologin from './Compontents/CustomerExecutive_Ret
 import CustomerExecutive_resetPassword from './Compontents/CustomerExecutive_resetPassword';
 import CustomerExecutive_accessCode from './Compontents/CustomerExecutive_accessCode';
 import CustomerExcecutive_NewPassword from './Compontents/CustomerExcecutive_NewPassword';
+import Customer_Excutives from './AdminCompontents/Customer_Excutives';
+import All_Customers from './AdminCompontents/All_Customers';
 import Admin_Sigin from './AdminCompontents/Admin_Sigin';
 import AdminDashboard from './AdminCompontents/AdminDashboard';
 import AddProduct from './AdminCompontents/AddProduct';
@@ -36,9 +38,6 @@ import Queryreceived from './ProductCompontents/Queryreceived';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 function App() {
-  useEffect(() => {
-    document.title = "Fresh Farm CRM"
- }, []);
 
   return <>
     <BrowserRouter>
@@ -75,6 +74,8 @@ function App() {
         <Route path='/view_Product' element={<View_Products/>}/>
         <Route path='/Queryreceived' element={<Queryreceived/>}/>
         <Route path='/Edit_Product/:id' element={<EditProduct/>}/>
+        <Route path='/Customer_Executives'element={<Customer_Excutives/>}/>
+        <Route path='/All_Customers' element={<All_Customers/>}/>
        </Routes>
       <ToastContainer limit={1}/>
     </BrowserRouter>
