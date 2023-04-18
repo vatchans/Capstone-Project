@@ -9,6 +9,7 @@ function Context({ children }) {
     let [Query, setQuery] = useState([])
     let [resolved, setresolvedquery] = useState([])
     let [Products, SetProducts] = useState([])
+    let [Employees,setEmployee] =useState([])
 
     let getusers = async () => {
         try {
@@ -21,6 +22,19 @@ function Context({ children }) {
             alert(err.response.message)
         }
     }
+
+    let getEmployees = async () => {
+        try {
+            let res = await axios.get('https://milk-way-crm.onrender.com/CustomerExcecutive/All')
+            if (res.status === 200) {
+                setEmployee(res.data)
+            }
+        }
+        catch (err) {
+            alert(err.response.message)
+        }
+    }
+
     let Pending = async () => {
         try {
             let res = await axios.get('https://milk-way-crm.onrender.com/Query/Pending_queries')
@@ -92,12 +106,16 @@ function Context({ children }) {
         Resolved()
     }, [])
 
+
     useEffect(()=>{
        getAllProducts()
     },[])
+     
+    useEffect(()=>{
+     getEmployees()
+    },[])
 
-
-    return <contextAPI.Provider value={{ users, Pending_queries, Query, resolved,Products}}>
+    return <contextAPI.Provider value={{ users, Pending_queries, Query, resolved,Products,Employees}}>
         {children}
     </contextAPI.Provider>
 }
