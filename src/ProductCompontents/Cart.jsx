@@ -273,7 +273,7 @@ function Cart() {
                       
                       {e.Product_name}
                     </p>
-                    <p className='Basket-item-Quantity mt-2'>{e.Product_Quantity} {e.Product_Category === "Milk" ? <>litre{e.Product_Quantity > 1 ? <>s</> : <></>}</> : e.Product_Category === "Egg" ? <>box{e.Product_Quantity > 1 ? <>es</> : <></>} (Pack of 6)</> : <></>}</p>
+                    <p className='Basket-item-Quantity mt-2'>{e.Product_Quantity} {e.Product_Category === "Milk" ? <>litre{e.Product_Quantity > 1 ? <>s</> : <></>}</> : e.Product_Category === "Egg" ? <>box{e.Product_Quantity > 1 ? <>es</> : <></>} (Pack of 6)</> :e.Product_Category === "Subscription" ? <>Month{e.Product_Quantity > 1 ? <>s</> : <></>} Subscription</>:<>Kg</>}</p>
                     <p className='Basket-item-price mt-2'>
                     <CurrencyRupeeIcon style={{fontSize:"medium"}}/>{e.Product_Price}
                     </p>
