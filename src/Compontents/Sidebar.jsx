@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom'
 import { useState,useContext } from 'react'
 import { Avatar } from '@mui/material'
 import { contextAPI } from './Context';
+import jwtDecode from 'jwt-decode';
 function Sidebar() {
    let [Showdropdown,hide]=useState(false)
    let data=useContext(contextAPI)
    let Show_dropdown=()=>{
       hide(!Showdropdown)
    }
+
+   let token=localStorage.getItem('CustomerExcecutive')
+   let decoded=jwtDecode(token)
+
+   
 
   return <>
    <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -21,10 +27,10 @@ function Sidebar() {
                <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
             </svg>
          </button>
-        <a href="https://flowbite.com" className="flex ml-2 md:mr-24 ">
+        <div className="flex ml-2 md:mr-24 ">
           <img src="Milky_Way_farm-removebg-preview (1).png" className="h-10 mr-3" alt="Logo" />
           <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">CRM</span>
-        </a>
+        </div>
       </div>
       <div className="flex items-center">
           <div className="flex items-center ml-3">
@@ -39,10 +45,10 @@ function Sidebar() {
                <div className="z-50  my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600 drop-down-item">
               <div className="px-4 py-3" role="none">
                 <p className="text-sm text-gray-900 dark:text-white" role="none">
-                  Neil Sims
+                  {decoded.Username}
                 </p>
                 <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                  neil.sims@flowbite.com
+                 {decoded.Email}
                 </p>
               </div>
               <ul className="py-1" role="none">
