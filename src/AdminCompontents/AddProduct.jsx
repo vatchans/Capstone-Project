@@ -49,7 +49,7 @@ function AddProduct() {
             <option value="Butter">Butter</option>
             <option value="Honey">Honey</option>
             <option value="Yogurt">Yogurt</option>
-            <option value="Subcription">Subscription</option>
+            <option value="Subscription">Subscription</option>
           </select>
           <input type='text' placeholder='Product Image URL' onChange={(e)=>setImage(e.target.value)}/>
           <input type='Number' placeholder='Product Price' onChange={(e)=>setPrice(e.target.value)}/>
