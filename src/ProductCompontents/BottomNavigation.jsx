@@ -86,14 +86,15 @@ function Bottomnavigation() {
 <Zoom>
 <div className='address'>
   <h4>Address</h4>
-  <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.3733790738925!2d77.48056704990557!3d28.438158882408995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1d663c45c89%3A0x7ff4c24f95def1bd!2sACE%20Golfshire!5e0!3m2!1sen!2sin!4v1679752509574!5m2!1sen!2sin" style={{border:"0",borderRadius:"10px"}} allowfullscreen loading="lazy" ></iframe></div>
+  <div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.7875145982744!2d80.17388690930612!3d13.112643287162555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52638fffbcf51f%3A0x4fa5fa3bc22d6aae!2sAavin%20Milk%20Processing%20Unit!5e0!3m2!1sen!2sin!4v1682431475344!5m2!1sen!2sin" style={{border:"0",borderRadius:"10px"}} allowfullscreen loading="lazy"></iframe></div>
   <h6>
   <a href="tel:+918225835554">Phone</a></h6>
   <p className='mt-3'>+91 8225835554</p>
   <h6>
-   <a  href="mailto:support@eyecan.in">Email</a>
+   <a  href="mailto:support@Milkway.in">Email</a>
   </h6>
-  <p className='mt-3'>support@eyecan.in</p>
+  <p className='mt-3'>support@Milkway.in</p>
 </div>
 </Zoom>
 </div>
