@@ -135,5 +135,31 @@ router.post("/new-password/:Email/", async (req, res) => {
     res.status(500).send('err')
   }
 })
+router.post('contact-form',async(req,res)=>{
+  try{
+    let {Username,sender,subject,message}=req.body
+    let transporter = nodemailer.createTransport({
+      host: "smtp.elasticemail.com",
+      port: 2525,
+      secure: false,
+      auth: {
+        user: "vatchans@gmail.com",
+        pass: "D2FDE1C28195576B0F29660C3D3D60467FBB",
+      },
+    });
+    let info = await transporter.sendMail({
+      from:sender,
+      to:'vatchans@gmail.com',
+      subject:subject, 
+      html:`Mail from ${Username} 
+      ${message}`
+      , 
+    });
+    res.status(200).send("sent sucessfully")
+  }
+  catch(error){
+    res.status(500).send("internal server error")
+  }
+})
 module.exports = router;
 
